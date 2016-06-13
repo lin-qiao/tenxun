@@ -1,0 +1,51 @@
+<div id="news"  ng-repeat="v in current">
+  <div class="headline" ng-if="v.banner">
+    <img src="./image/{{v.banner.img}}" alt="">
+  </div>
+  <ul class="news-lists">
+    <li ng-if="v.name==='NBA'" class="nbaMatch">
+      <div class="nbaMatch-content">
+        <div class="nbaMatch-xinxi">
+        <span class="team team-left">勇士</span>
+        <span class="vs">VS</span>
+        <span class="team team-right">骑士</span>
+        </div>
+        <div class="match-time">06月11日09：00</div>
+      </div>
+      <div class="nbaMatch-content">
+        <div class="nbaMatch-xinxi">
+        <span class="team team-left">勇士</span>
+        <span class="vs">VS</span>
+        <span class="team team-right">骑士</span>
+        </div>
+        <div class="match-time">06月13日09：00</div>
+      </div>
+    </li>
+    <li ng-if="v.name==='NBA'" class="nbaData">
+      <div class="community">
+        <img src="./image/shequ.png">
+        <span>社区</span>
+      </div>
+      <div class="data">
+        <img src="./image/shuju.png">
+        <span>数据</span>
+      </div>
+      <div class="review">
+        <img src="./image/huigu.png">
+        <span>回顾</span>
+      </div>
+    </li>
+    <li ng-repeat="s in v.newslists">
+      <a href="javascript:;">
+        <img src="./image/{{s.img}}">
+        <div class="title">
+          <div class="user-title">{{s.name}}</div>
+          <div class="xianxi">
+            <div class="source" ng-if="s.source">{{s.source}}</div>
+            <div class="comment" ng-if="s.comment">{{s.comment}}评</div>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

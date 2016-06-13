@@ -1,0 +1,29 @@
+<div id="custom">
+  <div class="header">
+    <a class="return" href="#/important/yw"></a>
+    <div class="title">内容定制</div>
+  </div>
+  <div class="custom-content">
+    <ul class="selected">
+      <li ng-if="v.isCustom" ng-repeat="v in custom" ng-click="addCustom(v)"><a href="javascript:;">{{v.name}}</a></li>
+      <li class="wait"><a href="javascript:;"></a></li>
+    </ul>
+    <ul class="unSelected-lists" ng-init="sel='genduo'">
+      <li class="option">
+        <div class="fenlei">
+        <span class="genduo" ng-class="{active:sel==='genduo'}" ng-click="sel='genduo'">
+          更多频道
+        </span>
+        <span class="difang" ng-class="{active:sel==='difang'}" ng-click="sel='difang'">地方新闻</span>
+        <span class="baozhi" ng-class="{active:sel==='baozhi'}" ng-click="sel='baozhi'">报纸</span>
+        </div>
+      </li>
+      <li ng-show="v.type==sel" ng-if="!v.isCustom" ng-repeat="v in custom">
+        <div class="list-content">
+        <span class="lists-content-name">{{v.name}}</span>
+        <span class="add" ng-click="addCustom(v)"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

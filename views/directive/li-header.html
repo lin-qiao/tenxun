@@ -1,0 +1,9 @@
+<div id="header">
+  <div class="user"></div>
+  <div class="new-content">
+    <ul class="new-lists">
+      <li  ng-class="{active:cur===v.acronym}" ng-repeat="v in custom|filter:{isCustom:true}" ng-click="saveCur(v)"><a href="#/important/{{v.acronym}}">{{v.name}}</a></li>
+    </ul>
+  </div>
+  <a class="add" href="#/custom"></a>
+</div>
