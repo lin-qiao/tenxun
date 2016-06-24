@@ -4,6 +4,10 @@ body, ul, li {
   margin: 0;
 }
 
+body{
+  height:100%;
+  overflow: hidden;
+}
 ul, li {
   list-style: none;
 }
